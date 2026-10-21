@@ -1,0 +1,2 @@
+Model,Observed AUC,Null mean AUC,Null SD,Permutation p-value (200 perms)
+Random Forest,0.4893,0.4988,0.0231,0.6617

@@ -1,0 +1,2 @@
+Model,Operating point,Max recall,Comparison
+"Random Forest (OOF, fused)",precision >= 0.50,1.0,Paper: LSTM recall 0.963 at precision 0.500

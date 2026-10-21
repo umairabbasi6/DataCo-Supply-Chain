@@ -1,0 +1,3 @@
+Metric,Value
+Adjusted Rand Index (clusters vs source),0.9529
+Silhouette (k=3),0.4119

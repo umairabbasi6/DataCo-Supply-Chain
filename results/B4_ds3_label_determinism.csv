@@ -1,0 +1,16 @@
+Test,Result
+"3-class depth-2 decision tree, training accuracy",1.0000
+Tree uses only,Traffic_Speed_kmph
+"Rule: level = 2 if speed<=20, 1 if 20<speed<=50, else 0 — agreement",1.0000
+Paper label (level==2) == (speed<=20) agreement,1.0000
+Alt. label (level>=1) == (speed<=50) agreement,1.0000
+ROC-AUC of (−speed) alone for level==2,1.0000
+ROC-AUC of (−speed) alone for level>=1,1.0000
+"Mann-Whitney p, Traffic_Density_vpkm: level 2 vs others",0.476
+"Mann-Whitney p, Vehicle_Count: level 2 vs others",0.180
+"Mann-Whitney p, FFT_Feature_1: level 2 vs others",0.549
+"Mann-Whitney p, Time_of_Day_min: level 2 vs others",0.483
+"RF 5-fold AUC, all features (level==2)",1.0000
+"RF 5-fold AUC, speed removed (level==2)",0.4606
+"RF 5-fold AUC, all features (level>=1)",1.0000
+"RF 5-fold AUC, speed removed (level>=1)",0.4839

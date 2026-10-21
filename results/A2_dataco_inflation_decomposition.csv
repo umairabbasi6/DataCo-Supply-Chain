@@ -1,0 +1,9 @@
+Setting,CV split,n_features,XGB AUC mean,XGB AUC SD,What changed
+S0 Original pipeline (as submitted),Random rows,42,0.9288,0.0031,Order Status + date strings + names included; row-level CV
+S1 - Order Status,Random rows,41,0.9134,0.0057,Remove post-event status
+S2 - shipping date,Random rows,40,0.8293,0.003,Remove post-event shipping timestamp
+S3 - order-date string & customer PII,Random rows,34,0.7999,0.0018,Remove near-unique strings that let the model memorise individual orders
+S4 S3 + grouped CV (same order never in train and test),Grouped by Order Id,34,0.7365,0.0032,Group-aware evaluation
+S5 Clean pre-shipment feature set + grouped CV,Grouped by Order Id,24,0.767,0.0034,Final corrected setting (see STEP 3 benchmark)
+Control: S4 + parsed (shipping - order) days,Grouped by Order Id,35,0.9903,0.0006,Shows the ceiling when the post-event timestamp is parsed
+Paper single 80/20 split (replicated),Random rows,42,0.933,,Reported in paper as 0.931

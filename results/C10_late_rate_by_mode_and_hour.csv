@@ -1,0 +1,9 @@
+Shipping Mode,Order placed,Late rate,Rows
+First Class,12:00 or later,0.953,14235
+First Class,before 12:00,0.954,13579
+Same Day,12:00 or later,0.956,4657
+Same Day,before 12:00,0.0,5080
+Second Class,12:00 or later,0.763,17632
+Second Class,before 12:00,0.77,17584
+Standard Class,12:00 or later,0.382,53600
+Standard Class,before 12:00,0.379,54152

@@ -1,0 +1,10 @@
+Setting,RF ROC-AUC,SD
+"Paper setting: all 17 features, single 80/20 split",0.9492,
+All 17 features (5-fold CV),0.9481,0.0032
+dataset_source flag ONLY,0.8636,0.0061
+speed ONLY,0.7359,0.0173
+dataset_source + speed (2 features),0.9308,0.0094
+All features EXCEPT dataset_source,0.9476,0.0024
+All features EXCEPT dataset_source and speed,0.863,0.0046
+"Fused model, AUC within DS2 rows only",0.5078,
+"Fused model, AUC within DS3 rows only",1.0,

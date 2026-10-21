@@ -1,0 +1,7 @@
+Model,TP,TN,FP,FN
+Majority baseline,98977,0,81542,0
+Shipping Mode only (LR),53500,72012,9530,45477
+Logistic Regression,56312,70859,10683,42665
+Random Forest,58609,70768,10774,40368
+XGBoost,59493,69349,12193,39484
+MLP (feed-forward NN),60294,67748,13794,38683

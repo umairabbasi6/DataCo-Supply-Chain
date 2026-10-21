@@ -1,0 +1,5 @@
+Model,"Paper AUC (leaky, row split)",Corrected AUC (grouped 5-fold),Paper F1,Corrected F1
+Logistic Regression,0.725,0.7426,0.67,0.6785
+Random Forest,0.888,0.7673,0.7,0.6962
+XGBoost,0.931,0.7681,0.802,0.6972
+LSTM / MLP,0.797,0.761,0.685,0.6968

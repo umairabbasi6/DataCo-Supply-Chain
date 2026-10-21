@@ -1,0 +1,24 @@
+Variable,Test,Value,Reading
+GPS Latitude,"KS test vs Uniform(min,max) (p)",0.347,consistent with uniform random draws
+GPS Longitude,"KS test vs Uniform(min,max) (p)",0.935,consistent with uniform random draws
+Temperature,"KS test vs Uniform(min,max) (p)",0.563,consistent with uniform random draws
+Humidity,"KS test vs Uniform(min,max) (p)",0.6,consistent with uniform random draws
+Speed,"KS test vs Uniform(min,max) (p)",0.976,consistent with uniform random draws
+Delay Time,"KS test vs Uniform(min,max) (p)",0.072,consistent with uniform random draws
+Cost,"KS test vs Uniform(min,max) (p)",0.174,consistent with uniform random draws
+Timestamp,"distinct time-of-day values in 1,000 rows",5,generated timestamps
+Transaction ID,distinct values,1000,unique per row (identifier)
+RFID ID,distinct values,1000,unique per row (identifier)
+Route ID,distinct values,1000,unique per row (identifier)
+GPS Latitude,"Mann-Whitney U, anomaly vs normal (p)",0.113,no difference
+GPS Longitude,"Mann-Whitney U, anomaly vs normal (p)",0.195,no difference
+Temperature,"Mann-Whitney U, anomaly vs normal (p)",0.795,no difference
+Humidity,"Mann-Whitney U, anomaly vs normal (p)",0.586,no difference
+Speed,"Mann-Whitney U, anomaly vs normal (p)",0.813,no difference
+Delay Time,"Mann-Whitney U, anomaly vs normal (p)",0.352,no difference
+Cost,"Mann-Whitney U, anomaly vs normal (p)",0.128,no difference
+Stage,Chi-square vs anomaly label (p); Cramer's V,0.865; V=0.027,no association
+Entity,Chi-square vs anomaly label (p); Cramer's V,0.353; V=0.057,no association
+Delivery Status,Chi-square vs anomaly label (p); Cramer's V,0.290; V=0.033,no association
+Disruption Type,Chi-square vs anomaly label (p); Cramer's V,0.003; V=0.117,weak association (V=0.12)
+Risk Factor x Disruption Type,Chi-square (p); Cramer's V,0.021; V=0.081,weak association (V=0.08)

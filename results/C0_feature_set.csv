@@ -1,0 +1,59 @@
+Column,Status,Type,Reason
+Type,kept,categorical,Known when the order is placed
+Shipping Mode,kept,categorical,Known when the order is placed
+Customer Segment,kept,categorical,Known when the order is placed
+Market,kept,categorical,Known when the order is placed
+Order Region,kept,categorical,Known when the order is placed
+Order Country,kept,categorical,Known when the order is placed
+Category Name,kept,categorical,Known when the order is placed
+Department Name,kept,categorical,Known when the order is placed
+Days for shipment (scheduled),kept,numeric,Known when the order is placed
+Order Item Quantity,kept,numeric,Known when the order is placed
+Order Item Product Price,kept,numeric,Known when the order is placed
+Order Item Discount Rate,kept,numeric,Known when the order is placed
+Order Item Discount,kept,numeric,Known when the order is placed
+Sales,kept,numeric,Known when the order is placed
+Order Item Total,kept,numeric,Known when the order is placed
+Order Item Profit Ratio,kept,numeric,Known when the order is placed
+Order Profit Per Order,kept,numeric,Known when the order is placed
+Latitude,kept,numeric,Known when the order is placed
+Longitude,kept,numeric,Known when the order is placed
+order_month,kept,numeric,Derived from order date / order basket
+order_weekday,kept,numeric,Derived from order date / order basket
+order_hour,kept,numeric,Derived from order date / order basket
+items_in_order,kept,numeric,Derived from order date / order basket
+order_value,kept,numeric,Derived from order date / order basket
+Late_delivery_risk,excluded,-,Target
+Delivery Status,excluded,-,Post-event: encodes the target (Late delivery = 1 exactly)
+Days for shipping (real),excluded,-,Post-event: actual shipping days; target = real > scheduled
+shipping date (DateOrders),excluded,-,Post-event: shipping date - order date reproduces real shipping days
+Order Status,excluded,-,Post-event: CANCELED / SUSPECTED_FRAUD are always labelled not-late
+Order Id,excluded,-,Identifier (used only as the grouping key for CV)
+Order Item Id,excluded,-,Identifier
+Customer Id,excluded,-,Identifier
+Order Customer Id,excluded,-,Identifier
+Product Card Id,excluded,-,Identifier
+Order Item Cardprod Id,excluded,-,Identifier
+Category Id,excluded,-,Duplicate of Category Name
+Department Id,excluded,-,Duplicate of Department Name
+Product Category Id,excluded,-,Duplicate of Category Name
+Customer Email,excluded,-,PII / masked constant
+Customer Password,excluded,-,PII / masked constant
+Customer Fname,excluded,-,PII
+Customer Lname,excluded,-,PII
+Customer Street,excluded,-,PII
+Customer Zipcode,excluded,-,PII / high cardinality
+Order Zipcode,excluded,-,86% missing
+Customer City,excluded,-,High-cardinality store location (Latitude/Longitude kept)
+Customer State,excluded,-,High-cardinality store location (Latitude/Longitude kept)
+Customer Country,excluded,-,Store country (2 values; redundant with Latitude/Longitude)
+Order City,excluded,-,"High cardinality (3,597 levels); Order Country/Region kept"
+Order State,excluded,-,"High cardinality (1,089 levels); Order Country/Region kept"
+Product Description,excluded,-,100% missing
+Product Image,excluded,-,URL string
+Product Name,excluded,-,High cardinality; Category Name kept
+Product Price,excluded,-,Duplicate of Order Item Product Price
+Product Status,excluded,-,Constant
+Sales per customer,excluded,-,Duplicate of Order Item Total
+Benefit per order,excluded,-,Duplicate of Order Profit Per Order
+order date (DateOrders),excluded,-,Raw string; replaced by month / weekday / hour

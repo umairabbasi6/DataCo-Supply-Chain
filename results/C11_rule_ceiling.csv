@@ -1,0 +1,9 @@
+Predictor,ROC-AUC
+"Shipping Mode (4 cells), in-sample",0.7282
+"Shipping Mode (4 cells), grouped 5-fold out-of-fold",0.7249
+"Shipping Mode x before/after 12:00 (8 cells), in-sample",0.76
+"Shipping Mode x before/after 12:00 (8 cells), grouped 5-fold out-of-fold",0.7569
+"Shipping Mode x before/after 12:00 x payment Type (32 cells), in-sample",0.7739
+"Shipping Mode x before/after 12:00 x payment Type (32 cells), grouped 5-fold out-of-fold",0.7716
+"XGBoost, grouped 5-fold out-of-fold (24 features)",0.768
+"Random Forest, grouped 5-fold out-of-fold (24 features)",0.7671

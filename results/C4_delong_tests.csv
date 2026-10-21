@@ -1,0 +1,6 @@
+Model A,Model B,AUC A,AUC B,Diff,z,p-value
+XGBoost,Random Forest,0.768,0.7671,0.0009,1.62,1.05e-01
+XGBoost,Logistic Regression,0.768,0.7424,0.0256,32.26,2.43e-228
+XGBoost,MLP (feed-forward NN),0.768,0.7606,0.0074,10.37,3.55e-25
+XGBoost,Shipping Mode only (LR),0.768,0.7249,0.0431,45.29,0.00e+00
+Random Forest,MLP (feed-forward NN),0.7671,0.7606,0.0065,9.13,6.82e-20

@@ -1,0 +1,8 @@
+Column,Test,Result,Implication
+Delivery Status,Late delivery <=> target = 1,1.0000,Identical to target
+Days for shipping (real),rule: real > scheduled reproduces target,0.9755,Target is defined from it
+shipping date (DateOrders),shipping date - order date == real shipping days,0.9742,Rebuilds the removed leakage column
+shipping date (DateOrders),rule: (ship - order) > scheduled reproduces target,0.9519,Post-event
+Order Status,share of CANCELED / SUSPECTED_FRAUD rows labelled late,"0.0000 (n=7,754)",Post-event outcome; 0% late by construction
+Order Id,orders whose items all share one label,1.0000,Row-level split puts items of the same order in train and test
+Order Id,mean items (rows) per order,2.75,Needs group-aware CV
